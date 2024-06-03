@@ -968,6 +968,7 @@ export interface ApiPartnerPartner extends Schema.SingleType {
     singularName: 'partner';
     pluralName: 'partners';
     displayName: 'Partner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -975,6 +976,15 @@ export interface ApiPartnerPartner extends Schema.SingleType {
   attributes: {
     image: Attribute.Media & Attribute.Required;
     title: Attribute.String;
+    item: Attribute.Component<'item.partner', true> &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 4;
+          max: 20;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

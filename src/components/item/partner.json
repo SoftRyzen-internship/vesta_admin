@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_item_partners",
+  "info": {
+    "displayName": "partner",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "partner",
     "pluralName": "partners",
-    "displayName": "Partner"
+    "displayName": "Partner",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,15 +13,24 @@
   "pluginOptions": {},
   "attributes": {
     "image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "title": {
       "type": "string"
+    },
+    "item": {
+      "displayName": "partner",
+      "type": "component",
+      "repeatable": true,
+      "component": "item.partner",
+      "max": 20,
+      "min": 4,
+      "required": true
     }
   }
 }
