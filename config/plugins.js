@@ -1,5 +1,11 @@
 module.exports = ({ env }) => ({
 
+  'multi-select': {
+    enabled: true,
+  },
+
+  "react-icons": true,
+
   graphql: {
     config: {
       endpoint: '/graphql',

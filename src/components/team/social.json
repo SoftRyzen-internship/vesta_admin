@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_team_socials",
+  "info": {
+    "displayName": "social",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    }
+  }
+}
