@@ -13,19 +13,28 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "blocks"
+      "type": "blocks",
+      "required": true
     },
     "legal_support": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "request_psychologist": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "help_psyhologist": {
-      "type": "integer"
+      "type": "integer",
+      "required": true
     },
     "date": {
-      "type": "date"
+      "type": "date",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
     }
   }
 }

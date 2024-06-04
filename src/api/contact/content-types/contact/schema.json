@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "footers",
+  "collectionName": "contacts",
   "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "Footer",
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
     "description": ""
   },
   "options": {
@@ -14,18 +14,19 @@
   "attributes": {
     "legal_support": {
       "type": "string",
-      "required": true,
-      "regex": "^\\d{3} \\d{3} \\d{2} \\d{2}$",
-      "unique": true
+      "required": true
     },
     "psychological_support": {
       "type": "string",
       "required": true,
-      "unique": true,
-      "regex": "^\\d{3} \\d{3} \\d{2} \\d{2}$"
+      "regex": "^\\+38 \\((0[3-9]\\d)\\) \\d{3} \\d{2} \\d{2}$"
     },
     "email": {
       "type": "email",
+      "required": true
+    },
+    "head_organization": {
+      "type": "string",
       "required": true
     }
   }

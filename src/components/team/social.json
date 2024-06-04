@@ -7,11 +7,23 @@
   },
   "options": {},
   "attributes": {
-    "facebook": {
-      "type": "string"
+    "social": {
+      "type": "enumeration",
+      "enum": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "YouTube Music",
+        "TikTok",
+        "Soundcloud",
+        "Spotify",
+        "Diia"
+      ],
+      "required": true
     },
-    "instagram": {
-      "type": "string"
+    "link": {
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -1,18 +1,19 @@
 {
   "collectionName": "components_item_partners",
   "info": {
-    "displayName": "partner",
-    "icon": "bulletList"
+    "displayName": "Partner",
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "img": {
-      "allowedTypes": [
-        "images"
-      ],
+    "image": {
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "name": {
       "type": "string",

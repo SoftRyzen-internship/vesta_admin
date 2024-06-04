@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_item_teams",
+  "info": {
+    "displayName": "Team",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "text",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "військовий/ветеран",
+        "військова/ветеранка",
+        "родина військового/ветерана ",
+        "родина військової/ветеранки"
+      ],
+      "required": true
+    },
+    "socialItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "team.social",
+      "required": false
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

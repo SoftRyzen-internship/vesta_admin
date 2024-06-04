@@ -28,14 +28,20 @@
       "type": "text",
       "required": true
     },
-    "pageText": {
-      "type": "text",
-      "required": true
-    },
     "social": {
       "type": "component",
       "repeatable": true,
       "component": "team.social"
+    },
+    "add_title": {
+      "type": "string"
+    },
+    "pageText": {
+      "type": "richtext",
+      "required": true
+    },
+    "add_text": {
+      "type": "richtext"
     }
   }
 }

@@ -1,5 +1,5 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "teams",
   "info": {
     "singularName": "team",
@@ -12,46 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "name": {
-      "type": "string",
-      "required": true,
-      "maxLength": 30,
-      "unique": true
-    },
-    "description": {
-      "type": "text",
-      "required": true,
-      "maxLength": 90
-    },
-    "text": {
-      "type": "text",
-      "required": true
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "військовий/ветеран",
-        "військова/ветеранка",
-        "родина військового/ветерана ",
-        "родина військової/ветеранки)"
-      ],
-      "required": true
-    },
-    "social": {
+    "itemTeam": {
       "type": "component",
-      "repeatable": false,
-      "component": "team.social"
+      "repeatable": true,
+      "component": "item.team",
+      "max": 45,
+      "min": 5,
+      "required": true
     }
   }
 }
