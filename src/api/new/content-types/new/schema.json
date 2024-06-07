@@ -4,7 +4,7 @@
   "info": {
     "singularName": "new",
     "pluralName": "news",
-    "displayName": "New",
+    "displayName": "NewsPost",
     "description": ""
   },
   "options": {
@@ -32,15 +32,11 @@
       "type": "text",
       "required": true
     },
-    "video": {
-      "allowedTypes": [
-        "videos"
-      ],
-      "type": "media",
-      "multiple": false
-    },
-    "description": {
+    "descriptionVideo": {
       "type": "text"
+    },
+    "videoLink": {
+      "type": "string"
     }
   }
 }

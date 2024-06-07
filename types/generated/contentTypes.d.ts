@@ -833,7 +833,7 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiContactContact extends Schema.CollectionType {
+export interface ApiContactContact extends Schema.SingleType {
   collectionName: 'contacts';
   info: {
     singularName: 'contact';
@@ -860,41 +860,6 @@ export interface ApiContactContact extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::contact.contact',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiFooterFooter extends Schema.CollectionType {
-  collectionName: 'footers';
-  info: {
-    singularName: 'footer';
-    pluralName: 'footers';
-    displayName: 'Footer';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    legal_support: Attribute.String & Attribute.Required & Attribute.Unique;
-    psychological_support: Attribute.String &
-      Attribute.Required &
-      Attribute.Unique;
-    email: Attribute.Email & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::footer.footer',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::footer.footer',
       'oneToOne',
       'admin::user'
     > &
@@ -946,7 +911,7 @@ export interface ApiNewNew extends Schema.CollectionType {
   info: {
     singularName: 'new';
     pluralName: 'news';
-    displayName: 'New';
+    displayName: 'NewsPost';
     description: '';
   };
   options: {
@@ -957,8 +922,8 @@ export interface ApiNewNew extends Schema.CollectionType {
     date: Attribute.Date & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
-    video: Attribute.Media;
-    description: Attribute.Text;
+    descriptionVideo: Attribute.Text;
+    videoLink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -969,7 +934,7 @@ export interface ApiNewNew extends Schema.CollectionType {
   };
 }
 
-export interface ApiOrganizationOrganization extends Schema.CollectionType {
+export interface ApiOrganizationOrganization extends Schema.SingleType {
   collectionName: 'organizations';
   info: {
     singularName: 'organization';
@@ -981,12 +946,12 @@ export interface ApiOrganizationOrganization extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.Blocks & Attribute.Required;
     legal_support: Attribute.Integer & Attribute.Required;
     request_psychologist: Attribute.Integer & Attribute.Required;
     help_psyhologist: Attribute.Integer & Attribute.Required;
     date: Attribute.Date & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
+    title: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1171,7 +1136,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::contact.contact': ApiContactContact;
-      'api::footer.footer': ApiFooterFooter;
       'api::location.location': ApiLocationLocation;
       'api::new.new': ApiNewNew;
       'api::organization.organization': ApiOrganizationOrganization;

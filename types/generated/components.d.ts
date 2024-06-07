@@ -10,6 +10,7 @@ export interface ItemLocation extends Schema.Component {
     city: Attribute.String & Attribute.Required;
     address: Attribute.String & Attribute.Required;
     phone: Attribute.String & Attribute.Required;
+    locationLink: Attribute.String & Attribute.Required;
   };
 }
 

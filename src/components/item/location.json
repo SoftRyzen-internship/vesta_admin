@@ -17,6 +17,10 @@
     "phone": {
       "type": "string",
       "required": true
+    },
+    "locationLink": {
+      "type": "string",
+      "required": true
     }
   }
 }
