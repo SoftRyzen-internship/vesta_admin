@@ -31,10 +31,6 @@
     "text": {
       "type": "text",
       "required": true
-    },
-    "title": {
-      "type": "string",
-      "required": true
     }
   }
 }

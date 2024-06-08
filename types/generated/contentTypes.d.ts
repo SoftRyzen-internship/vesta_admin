@@ -951,7 +951,6 @@ export interface ApiOrganizationOrganization extends Schema.SingleType {
     help_psyhologist: Attribute.Integer & Attribute.Required;
     date: Attribute.Date & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1022,7 +1021,6 @@ export interface ApiProjectProject extends Schema.CollectionType {
   };
   attributes: {
     image: Attribute.Media & Attribute.Required;
-    title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
     social: Attribute.Component<'team.social', true>;
     add_title: Attribute.String;

@@ -20,10 +20,6 @@
         "images"
       ]
     },
-    "title": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
