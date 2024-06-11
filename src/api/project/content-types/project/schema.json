@@ -38,6 +38,10 @@
     },
     "add_text": {
       "type": "richtext"
+    },
+    "title": {
+      "type": "string",
+      "required": true
     }
   }
 }

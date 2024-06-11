@@ -1026,6 +1026,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     add_title: Attribute.String;
     pageText: Attribute.RichText & Attribute.Required;
     add_text: Attribute.RichText;
+    title: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
