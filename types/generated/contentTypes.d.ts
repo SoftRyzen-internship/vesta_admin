@@ -924,6 +924,7 @@ export interface ApiNewNew extends Schema.CollectionType {
     text: Attribute.Text & Attribute.Required;
     descriptionVideo: Attribute.Text;
     videoLink: Attribute.String;
+    slug: Attribute.UID<'api::new.new', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1027,6 +1028,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     pageText: Attribute.RichText & Attribute.Required;
     add_text: Attribute.RichText;
     title: Attribute.String & Attribute.Required;
+    slug: Attribute.UID<'api::project.project', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
