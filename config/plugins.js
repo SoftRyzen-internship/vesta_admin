@@ -1,5 +1,9 @@
 module.exports = ({ env }) => ({
 
+  "vercel-deploy": {
+    enabled: true,
+  },
+
   'multi-select': {
     enabled: true,
   },
