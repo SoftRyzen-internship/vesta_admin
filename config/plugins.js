@@ -1,10 +1,16 @@
 module.exports = ({ env }) => ({
-
   "vercel-deploy": {
     enabled: true,
+    config: {
+      deployHook: env("VERCEL_DEPLOY_PLUGIN_HOOK"),
+      apiToken: env("VERCEL_DEPLOY_PLUGIN_API_TOKEN"),
+      appFilter: env("VERCEL_DEPLOY_PLUGIN_APP_FILTER"),
+      teamFilter: env('VERCEL_DEPLOY_PLUGIN_TEAM_FILTER'),
+      roles: ["strapi-super-admin", "strapi-editor", "strapi-author"],
+    },
   },
 
-  'multi-select': {
+  "multi-select": {
     enabled: true,
   },
 
@@ -12,7 +18,7 @@ module.exports = ({ env }) => ({
 
   graphql: {
     config: {
-      endpoint: '/graphql',
+      endpoint: "/graphql",
       shadowCRUD: true,
       playgroundAlways: false,
       depthLimit: 7,
@@ -21,14 +27,14 @@ module.exports = ({ env }) => ({
         tracing: false,
       },
     },
-    },
-    upload: {
+  },
+  upload: {
     config: {
-      provider: 'cloudinary',
+      provider: "cloudinary",
       providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET'),
+        cloud_name: env("CLOUDINARY_NAME"),
+        api_key: env("CLOUDINARY_KEY"),
+        api_secret: env("CLOUDINARY_SECRET"),
       },
       actionOptions: {
         upload: {},
