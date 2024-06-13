@@ -32,9 +32,6 @@
       "type": "text",
       "required": true
     },
-    "descriptionVideo": {
-      "type": "text"
-    },
     "videoLink": {
       "type": "string"
     },

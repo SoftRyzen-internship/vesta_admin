@@ -922,7 +922,6 @@ export interface ApiNewNew extends Schema.CollectionType {
     date: Attribute.Date & Attribute.Required;
     title: Attribute.String & Attribute.Required;
     text: Attribute.Text & Attribute.Required;
-    descriptionVideo: Attribute.Text;
     videoLink: Attribute.String;
     slug: Attribute.UID<'api::new.new', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
